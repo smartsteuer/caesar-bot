@@ -15,6 +15,6 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.7.5",
+    "babel-cli": "^6.7.5"
   }
 }
