@@ -4,7 +4,7 @@ var request = require("request");
 var webhookPost = function (req, res) {
 	console.log(JSON.stringify(req.body, null, 2));
 	var messaging_events = req.body.entry[0].messaging;
-	var event, sender,i;
+	var event, sender,i, text;
 
 	for (i = 0; i < messaging_events.length; i++) {
 		event = messaging_events[i];
