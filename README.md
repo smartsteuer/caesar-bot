@@ -3,7 +3,7 @@
 
 Hier ist erstmal nur eine Lange TODO-Liste für die Infrastruktur
 
-1. ~~json response ~~
+1. ~~json response~~
 2. ~~test setup for unit tests~~
 4. switch to es6
 3. use a js lint-er
