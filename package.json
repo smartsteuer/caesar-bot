@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node --use_strict ./bin/server"
+    "start": "node --use_strict ./bin/server",
+    "test" : "node_modules/.bin/mocha ./src/test"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
