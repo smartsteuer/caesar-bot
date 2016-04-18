@@ -1,8 +1,8 @@
 var expect = require('chai').expect;
 var sinon = require('sinon');
 
-var indexImpl = require('../main/index/index-impl');
-var info = require('../main/index/info');
+var indexImpl = require('../../main/index/index-impl');
+var info = require('../../main/index/info');
 
 describe('Index implementation', function() {
 
