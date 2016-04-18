@@ -2,11 +2,12 @@ var request = require("request");
 
 
 var webhookPost = function (req, res) {
+	console.log(JSON.stringify(req.body, null, 2));
 	var messaging_events = req.body.entry[0].messaging;
 	var event, sender,i;
 
 	for (i = 0; i < messaging_events.length; i++) {
-		event = req.body.entry[0].messaging[i];
+		event = messaging_events[i];
 		sender = event.sender.id;
 		if (event.message && event.message.text) {
 			text = event.message.text;
