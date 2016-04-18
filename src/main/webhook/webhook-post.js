@@ -9,6 +9,8 @@ var webhookPost = function (req, res) {
 	for (i = 0; i < messaging_events.length; i++) {
 		event = messaging_events[i];
 		sender = event.sender.id;
+		console.log("sender: " + sender);
+		console.log(JSON.stringify(event, null, 2));
 		if (event.message && event.message.text) {
 			text = event.message.text;
 			// Handle a text message from this sender
