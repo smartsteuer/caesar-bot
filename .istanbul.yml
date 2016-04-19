@@ -1,0 +1,15 @@
+instrumentation:
+    root: src
+    include-all-sources: true
+    es-modules: false
+reporting:
+    print: summary
+    reports:
+        - lcov
+        - html
+    dir: ./build/coverage
+    watermarks:
+        statements: [70, 90]
+        lines: [70, 90]
+        functions: [70, 90]
+        branches: [70, 90]

@@ -1,17 +1,18 @@
-var expect = require('chai').expect;
-var sinon = require('sinon');
+let expect = require('chai').expect;
+let sinon = require('sinon');
 
-var indexImpl = require('../../main/index/index-impl');
-var info = require('../../main/index/info');
+let indexImpl = require('../../main/index/index-impl');
+let info = require('../../main/index/info');
 
-describe('Index implementation', function() {
+describe('Index implementation', () => {
 
-	describe('GET request', function () {
+	describe('GET request', () => {
 
-		it('should send info object to json method', function () {
-			var req,res,spy;
+		it('should send info object to json method', () => {
+			let req = {};
+			let res = {};
+			let spy;
 
-			req = res = {};
 			spy = res.json = sinon.spy();
 
 			indexImpl.get(req, res);
