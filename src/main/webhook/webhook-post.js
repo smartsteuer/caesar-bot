@@ -2,11 +2,11 @@ let sendTextMessage = require('./fb-send-message');
 
 
 function getFirstMessaging(req) {
-	console.log(req.body);
+	console.log( JSON.stringify(req.body, null, 2);
 	return req.body.entry[0].messaging;
 }
 
-var handleMessagingEvent = function (event) {
+function handleMessagingEvent(event) {
 	let sender, text;
 
 	sender = event.sender.id;
@@ -15,7 +15,7 @@ var handleMessagingEvent = function (event) {
 		// Handle a text message from this sender
 		sendTextMessage(sender, text);
 	}
-};
+}
 
 function webhookPost(req, res) {
 	let messaging_events = getFirstMessaging(req);
