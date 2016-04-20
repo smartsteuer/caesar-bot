@@ -4,9 +4,9 @@ const FB_ACCESS_TOKEN = "EAAWdYsStVAoBAFYgMQsmCDYZCXYq1Rb52tMlGSuHq7bFOOAX6yQmD1
 
 function webhookPost(req, res) {
 	let messaging_events = req.body.entry[0].messaging;
-	let event, sender, text;
+	let event, sender,i, text;
 
-	for (var i of messaging_events) {
+	for (i = 0; i < messaging_events.length; i++) {
 		event = messaging_events[i];
 		sender = event.sender.id;
 		if (event.message && event.message.text) {
