@@ -1,6 +1,8 @@
-var pjson = require('../../../package.json');
+let packageJson = require('../../../package.json');
 
-module.exports = {
-	description: "This is the " + pjson.name,
-	version: pjson.version
+let indexInfo = {
+	description: `This is the ${packageJson.name}`,
+	version: packageJson.version
 };
+
+module.exports = indexInfo;

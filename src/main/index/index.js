@@ -1,7 +1,7 @@
 let router = require('express').Router();
-let indexImpl = require('./index-impl');
+let indexGet = require('./index-get');
 
 /* GET some version info. */
-router.get('/', indexImpl.get);
+router.get('/', indexGet);
 
 module.exports = router;

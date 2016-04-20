@@ -1,7 +1,7 @@
 let expect = require('chai').expect;
 let sinon = require('sinon');
 
-let indexImpl = require('../../main/index/index-impl');
+let indexImpl = require('../../main/index/index-get');
 let info = require('../../main/index/info');
 
 describe('Index implementation', () => {
@@ -15,9 +15,9 @@ describe('Index implementation', () => {
 
 			spy = res.json = sinon.spy();
 
-			indexImpl.get(req, res);
+			indexImpl(req, res);
 
-			expect(spy.calledWith(info));
+			expect(spy.calledWithMatch(info)).to.equal(true);
 		});
 	});
 });

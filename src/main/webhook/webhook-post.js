@@ -1,41 +1,37 @@
-var request = require("request");
+let request = require("request");
 
+const FB_ACCESS_TOKEN = "EAAWdYsStVAoBAFYgMQsmCDYZCXYq1Rb52tMlGSuHq7bFOOAX6yQmD1YZA2yzJ0KZCqpl6n0j5n6a7iG9F0ipDMiAapw7RjHqENARUy9FaAZAUpDZCZAEUVmW6ph2gxRyl3KRaceFPjvDC7KfCPpJDgdumZAMMh21E4wbSZBPL4tcfgZDZD";
 
-var webhookPost = function (req, res) {
-	console.log(JSON.stringify(req.body, null, 2));
-	var messaging_events = req.body.entry[0].messaging;
-	var event, sender,i, text;
+function webhookPost(req, res) {
+	let messaging_events = req.body.entry[0].messaging;
+	let event, sender,i, text;
 
 	for (i = 0; i < messaging_events.length; i++) {
 		event = messaging_events[i];
 		sender = event.sender.id;
-		console.log("sender: " + sender);
-		console.log(JSON.stringify(event, null, 2));
 		if (event.message && event.message.text) {
 			text = event.message.text;
 			// Handle a text message from this sender
-			console.log("received text: " + text);
 			sendTextMessage(sender, text);
 		}
 	}
 	res.sendStatus(200);
-};
+}
 
-var token = "EAAWdYsStVAoBAFYgMQsmCDYZCXYq1Rb52tMlGSuHq7bFOOAX6yQmD1YZA2yzJ0KZCqpl6n0j5n6a7iG9F0ipDMiAapw7RjHqENARUy9FaAZAUpDZCZAEUVmW6ph2gxRyl3KRaceFPjvDC7KfCPpJDgdumZAMMh21E4wbSZBPL4tcfgZDZD";
 
 function sendTextMessage(sender, text) {
-	var messageData = {
+	let messageData = {
 		text: text
 	};
 	request({
 		url: 'https://graph.facebook.com/v2.6/me/messages',
-		qs: {access_token:token},
+		qs: {access_token: FB_ACCESS_TOKEN},
 		method: 'POST',
 		json: {
-			recipient: {id:sender},
+			recipient: {id: sender},
 			message: messageData
 		}
-	}, function(error, response, body) {
+	}, (error, response/*, body*/) => {
 		if (error) {
 			console.log('Error sending message: ', error);
 		} else if (response.body.error) {
