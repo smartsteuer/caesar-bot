@@ -6,7 +6,7 @@ function webhookPost(req, res) {
 	let messaging_events = req.body.entry[0].messaging;
 	let event, sender, text;
 
-	for (let i of messaging_events) {
+	for (var i of messaging_events) {
 		event = messaging_events[i];
 		sender = event.sender.id;
 		if (event.message && event.message.text) {
