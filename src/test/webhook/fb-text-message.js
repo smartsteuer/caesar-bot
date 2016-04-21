@@ -1,11 +1,11 @@
-let jsonBody = require('./fb-text-message.json');
+let template = require('./fb-message-template.json');
 
 function cloneJson(json) {
 	return JSON.parse(JSON.stringify(json));
 }
 
 function textMessage(text) {
-	let json = cloneJson(jsonBody);
+	let json = cloneJson(template);
 	json.entry[0].messaging[0].message.text = text;
 	return json;
 }

@@ -1,4 +1,4 @@
-let sendTextMessage = require('./fb-send-message');
+let sendTextMessage = require('./fb-send-message').sendTextMessage;
 
 function getFirstMessaging(req) {
 	// console.log( JSON.stringify(req.body, null, 2));

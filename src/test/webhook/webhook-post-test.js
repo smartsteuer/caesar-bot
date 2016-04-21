@@ -8,12 +8,15 @@ describe('Webhook POST', () => {
 	let req,res,sendMessage,statusCode;
 
 	let webhookPost = mockRequire('../../main/webhook/webhook-post', {
-		'./fb-send-message': (sender, text) => {
-			sendMessage = {
-				sender:sender,
-				text:text
+		'./fb-send-message': {
+			sendTextMessage: (sender, text) => {
+				sendMessage = {
+					sender: sender,
+					text: text
+				}
 			}
 		}
+
 	});
 
 	beforeEach('set up request and response stubs', () => {
