@@ -9,7 +9,7 @@ reporting:
         - html
     dir: ./build/coverage
     watermarks:
-        statements: [70, 90]
-        lines: [70, 90]
-        functions: [70, 90]
-        branches: [70, 90]
+        statements: [50, 85]
+        lines: [50, 85]
+        functions: [50, 85]
+        branches: [50, 85]
