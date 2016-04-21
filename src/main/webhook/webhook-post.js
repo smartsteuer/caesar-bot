@@ -1,8 +1,7 @@
 let sendTextMessage = require('./fb-send-message');
 
-
 function getFirstMessaging(req) {
-	console.log( JSON.stringify(req.body, null, 2));
+	// console.log( JSON.stringify(req.body, null, 2));
 	return req.body.entry[0].messaging;
 }
 
