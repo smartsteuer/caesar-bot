@@ -6,7 +6,7 @@ let bodyParser = require('body-parser');
 
 let errorHandler = require('./error/handler');
 let index = require('./index/index');
-let webhook = require('./webhook/webhook');
+let fb = require('./fb/fb-webhook');
                                                                            
 let app = express();
 
@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use('/', index);
-app.use('/webhook/', webhook);
+app.use('/fb/', fb);
 
 // catch 404 and forward to error handler
 app.use(errorHandler.create404);

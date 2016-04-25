@@ -1,7 +1,7 @@
 let request = require('supertest');
 let http = require('http');
 
-describe('Running app', function () {
+describe('Smoke testing running app', function () {
 	let app, server;
 
 	beforeEach(function () {

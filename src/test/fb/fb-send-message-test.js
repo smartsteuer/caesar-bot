@@ -7,7 +7,7 @@ describe('Sending facebook messages', () => {
 
 	let requestCallArguments;
 
-	let fbSendMessage = mockRequire('../../main/webhook/fb-send-message', {
+	let fbSendMessage = mockRequire('../../main/fb/fb-send-message', {
 		'request': (options, callback) => {
 			requestCallArguments = {
 				options: options,

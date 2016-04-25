@@ -7,7 +7,7 @@ describe('Webhook POST', () => {
 
 	let req,res,sendMessage,statusCode;
 
-	let webhookPost = mockRequire('../../main/webhook/webhook-post', {
+	let webhookPost = mockRequire('../../main/fb/webhook-post', {
 		'./fb-send-message': {
 			sendTextMessage: (sender, text) => {
 				sendMessage = {
