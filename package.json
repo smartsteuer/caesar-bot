@@ -1,5 +1,5 @@
 {
-  "name": "steuermann.bot",
+  "name": "caesar",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -20,6 +20,7 @@
     "request": "^2.72.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.10.1",
     "chai": "^3.5.0",
     "isparta": "^4.0.0",
     "istanbul": "^0.4.3",
