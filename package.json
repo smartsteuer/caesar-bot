@@ -5,6 +5,7 @@
   "scripts": {
     "start": "babel-node bin/server",
     "test": "mocha --compilers js:babel-register src/test/**/*-test.js",
+    "test_fb": "mocha --compilers js:babel-register src/test/fb/webhook-post-test.js",
     "cover": "babel-node node_modules/.bin/isparta cover _mocha -- --reporter dot src/test/**/*-test.js",
     "clean": "rm -rf ./build"
   },

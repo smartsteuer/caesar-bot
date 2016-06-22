@@ -21,7 +21,7 @@ describe('Webhook POST', () => {
 
 	beforeEach('set up request and response stubs', () => {
 		req = {};
-		req.body = mockTextMessage("Eine Testnachricht.");
+		req.body = mockTextMessage("XIV");
 
 		res = {};
 		statusCode = null;
@@ -32,7 +32,6 @@ describe('Webhook POST', () => {
 		sendMessage = null;
 	});
 
-
 	it('should send status 200', () => {
 
 		webhookPost(req, res);
@@ -41,19 +40,19 @@ describe('Webhook POST', () => {
 	});
 
 
-	it('should send text back to sender', () => {
+	it('should send result back to sender', () => {
 
 		webhookPost(req, res);
 
 		//noinspection BadExpressionStatementJS
 		expect(sendMessage).not.to.be.null;
 		expect(sendMessage.sender).to.be.equal(1135310036513916);
-		expect(sendMessage.text).to.be.equal("Eine Testnachricht.");
+		expect(sendMessage.text).to.be.equal("In Deiner Welt sind es 14");
 	});
 
 	it('should only respond if a text messages is present', () => {
 		req.body.entry[0].messaging[0].message.text = undefined;
-		
+
 		webhookPost(req, res);
 
 		//noinspection BadExpressionStatementJS
