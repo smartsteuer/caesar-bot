@@ -20,30 +20,55 @@ describe('Sending facebook messages', () => {
 
 		beforeEach(() => {
 			requestCallArguments = {};
-			fbSendMessage.sendTextMessage('sendId', 'text of message to send.');
 		});
 
 		it('should call the fb url', () => {
+			// when
+			fbSendMessage.sendTextMessage('sendId', 'text of message to send.');
+
+			// than
 			expect(requestCallArguments.options.url).to.equal("https://graph.facebook.com/v2.6/me/messages");
 		});
 
-		it('should provide an access token', () => {
-			expect(requestCallArguments.options.qs.access_token).to.be.a('string');
+		it('should provide an access token from environment', () => {
+			// given
+			process.env.FB_ACCESS_TOKEN = 'super secret token';
+			// when
+			fbSendMessage.sendTextMessage('sendId', 'text of message to send.');
+
+			// than
+			expect(requestCallArguments.options.qs.access_token).to.equal('super secret token');
 		});
 
 		it('should use the POST method', () => {
+			// when
+			fbSendMessage.sendTextMessage('sendId', 'text of message to send.');
+
+			// than
 			expect(requestCallArguments.options.method).to.equal('POST');
 		});
 
 		it('should address the sender', () => {
+			// when
+			fbSendMessage.sendTextMessage('sendId', 'text of message to send.');
+
+			// than
 			expect(requestCallArguments.options.json.recipient.id).to.equal('sendId');
 		});
 
 		it('should send the text as text', () => {
+			// when
+			fbSendMessage.sendTextMessage('sendId', 'text of message to send.');
+
+			// than
 			expect(requestCallArguments.options.json.message.text).to.equal('text of message to send.');
 		});
 
 		it('should provice an error handler', () => {
+			// when
+			fbSendMessage.sendTextMessage('sendId', 'text of message to send.');
+
+			// than
 			//noinspection BadExpressionStatementJS
 			expect(requestCallArguments.errorCallback).not.to.undefined;
 		});
