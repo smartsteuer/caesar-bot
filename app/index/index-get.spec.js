@@ -1,7 +1,7 @@
 let expect = require('chai').expect;
 let sinon = require('sinon');
 
-let indexImpl = require('./index-get');
+let indexGet = require('./index-get');
 let info = require('./info');
 
 describe('Index implementation', () => {
@@ -15,7 +15,7 @@ describe('Index implementation', () => {
 
 			spy = res.json = sinon.spy();
 
-			indexImpl(req, res);
+			indexGet(req, res);
 
 			expect(spy.calledWithMatch(info)).to.equal(true);
 		});
