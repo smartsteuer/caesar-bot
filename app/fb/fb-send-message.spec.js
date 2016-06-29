@@ -1,13 +1,13 @@
 let expect = require('chai').expect;
 let mockRequire = require('proxyquire');
-let MockConsole = require('../util/mock-console');
+let MockConsole = require('../test-util/mock-console');
 
 
 describe('Sending facebook messages', () => {
 
 	let requestCallArguments;
 
-	let fbSendMessage = mockRequire('../../main/fb/fb-send-message', {
+	let fbSendMessage = mockRequire('./fb-send-message', {
 		'request': (options, callback) => {
 			requestCallArguments = {
 				options: options,

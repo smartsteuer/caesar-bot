@@ -5,8 +5,8 @@ describe('Smoke testing running app', function () {
 	let app, server;
 
 	beforeEach(function () {
-		delete require.cache[require.resolve('../main/app')];
-		app = require('../main/app');
+		delete require.cache[require.resolve('./caesar.app')];
+		app = require('./caesar.app');
 		server = http.createServer(app);
 		server.listen();
 	});

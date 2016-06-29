@@ -1,9 +1,7 @@
 let sendTextMessage = require('./fb-send-message').sendTextMessage;
 
-const roman = /(Ciao|Bis bald|Adios|Auf Wieder|Bis denne|Tschü|Tschö|mach'?s?\W?(et)? (g|j)ut)/i;
 
 function getFirstMessaging(req) {
-	// console.log( JSON.stringify(req.body, null, 2));
 	return req.body.entry[0].messaging;
 }
 

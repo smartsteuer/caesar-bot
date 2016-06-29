@@ -1,6 +1,6 @@
 let request = require("request");
 
-const FB_ACCESS_TOKEN = "EAAPbJ9GulzQBAKOOo5gD4EAtEYTI3Oj7xhtbB3ChUvfYd9oCZBIs7QnJ1AEevbZCwam0IdnjYzlZCJ286scYgabnF0twdvYmz9RiebxmaMHdLE7wGQ5eUlXVRF9FtYw0LfvWx9p811bzbX2mKdepgP42Co5GZBZBrpKdbyB3rPgZDZD";
+const FB_ACCESS_TOKEN = "";
 
 
 function errorHandler(error, response/*, body*/) {

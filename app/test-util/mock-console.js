@@ -1,13 +1,11 @@
-
-module.exports =
-class MockConsole {
+module.exports = class MockConsole {
 	constructor() {
 		this.orgLogMethod = this.getOriginalLogMethod();
 		this.logCalls = [];
 	}
 
 	getOriginalLogMethod() {
-		if(this.orgLogMethod === undefined) {
+		if (this.orgLogMethod === undefined) {
 			return console.log;
 		} else {
 			return this.orgLogMethod;
@@ -25,4 +23,4 @@ class MockConsole {
 		console.log = this.orgLogMethod;
 	}
 
-}
+};

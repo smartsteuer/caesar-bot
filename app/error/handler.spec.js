@@ -1,6 +1,6 @@
 let expect = require('chai').expect;
 
-let errorHandler = require('../../main/error/handler');
+let errorHandler = require('./handler');
 
 function createMockResponse() {
 	let res = {};

@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "start": "babel-node bin/server",
-    "test": "mocha --compilers js:babel-register src/test/**/*-test.js",
-    "test_fb": "mocha --compilers js:babel-register src/test/fb/webhook-post-test.js",
-    "cover": "babel-node node_modules/.bin/isparta cover _mocha -- --reporter dot src/test/**/*-test.js",
+    "test": "mocha --compilers js:babel-register app/**/*.spec.js",
+    "cover": "babel-node node_modules/.bin/isparta cover _mocha -- --reporter dot app/**/*.spec.js",
     "clean": "rm -rf ./build"
   },
   "dependencies": {
@@ -21,7 +20,6 @@
     "request": "^2.72.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.10.1",
     "chai": "^3.5.0",
     "isparta": "^4.0.0",
     "istanbul": "^0.4.3",

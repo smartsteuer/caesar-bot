@@ -1,4 +1,4 @@
-let template = require('./fb-message-template.json');
+let template = require('./incomming-test-message.template.json');
 
 function cloneJson(json) {
 	return JSON.parse(JSON.stringify(json));

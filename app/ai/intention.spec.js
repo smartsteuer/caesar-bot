@@ -1,6 +1,6 @@
 let expect = require('chai').expect;
 let unroll = require('unroll');
-let intention = require('../../main/ai/intention');
+let intention = require('./intention');
 
 // wrap mochas it function
 unroll.use(it);
@@ -54,14 +54,14 @@ describe('Intention', () => {
 			['mach\'s gut', 'bye'],
 			['machs gut', 'bye'],
 			['machet jut', 'bye'],
-			['mach et jut', 'bye'],
+			['mach et jut', 'bye']
 
-			// offset
-			["Kann ich meine Brille von der Steuer absetzen?", "offset"],
-			["Kann ich eine brille von der Steuer absetzen?", "offset"],
-			["Kann ich Telefonkosten von der Steuer absetzen?", "offset"],
-			["Kann ich Telefonkosten abschreiben?", "offset"],
-			["Kann ich Telefonkosten absetzen?", "offset"]
+			// // TODO: roman numbers
+			// ["Kann ich meine Brille von der Steuer absetzen?", "offset"],
+			// ["Kann ich eine brille von der Steuer absetzen?", "offset"],
+			// ["Kann ich Telefonkosten von der Steuer absetzen?", "offset"],
+			// ["Kann ich Telefonkosten abschreiben?", "offset"],
+			// ["Kann ich Telefonkosten absetzen?", "offset"]
 
 	])
 });

@@ -1,7 +1,7 @@
 let expect = require('chai').expect;
 let sinon = require('sinon');
 
-let webhookGet = require('../../main/fb/webhook-get');
+let webhookGet = require('./webhook-get');
 
 describe('Webhook GET', () => {
 

@@ -1,13 +1,13 @@
 let expect = require('chai').expect;
 let mockRequire = require('proxyquire');
-let mockTextMessage = require('./fb-text-message');
+let mockTextMessage = require('./incomming-test-message');
 
 
 describe('Webhook POST', () => {
 
 	let req,res,sendMessage,statusCode;
 
-	let webhookPost = mockRequire('../../main/fb/webhook-post', {
+	let webhookPost = mockRequire('./webhook-post', {
 		'./fb-send-message': {
 			sendTextMessage: (sender, text) => {
 				sendMessage = {
