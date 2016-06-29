@@ -1,7 +1,8 @@
 instrumentation:
-    root: src
+    root: app
     include-all-sources: true
     es-modules: false
+    excludes: ['*.spec.js']
 reporting:
     print: summary
     reports:
