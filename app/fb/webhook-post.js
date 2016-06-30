@@ -9,9 +9,12 @@ function getFirstMessaging(req) {
 function handleMessagingEvent(event) {
 	let sender, text;
 
+	console.log('######################');
+	console.log(event);
 	sender = event.sender.id;
 	if (event.message && event.message.text) {
 		text = event.message.text;
+		console.log(text);
 		// Handle a text message from this sender
 		let result = "In Deiner Welt sind es " + fromRoman(text);
 
