@@ -13,11 +13,20 @@ function handleMessagingEvent(event) {
 	console.log(event);
 	sender = event.sender.id;
 	if (event.message && event.message.text) {
+		let result;
 		text = event.message.text;
 		console.log(text);
 		// Handle a text message from this sender
-		let result = "In Deiner Welt sind es " + fromRoman(text);
+		try {
+			let arabic = fromRoman(text);
+			result = "In Deiner Welt sind es " + arabic
+		} catch (e) {
+			console.log(e.message)
+		}
 
+		if(!result) {
+			result = "Schreibt mir einfach eine Zahl, welche ich übersetzten soll."
+		}
 		sendTextMessage(sender, result);
 	}
 }
