@@ -14,5 +14,11 @@ clone
 npm install
 npm test
 
-- add 
+## Configuration
+ 
+ fb access-token
+ 
+
+
+## Deployment on Heroku
 
