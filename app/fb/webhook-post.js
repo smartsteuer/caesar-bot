@@ -8,9 +8,6 @@ function getFirstMessaging(req) {
 
 function handleMessagingEvent(event) {
 	let sender, text;
-
-	console.log('######################');
-	console.log(event);
 	sender = event.sender.id;
 	if (event.message && event.message.text) {
 		let result;
@@ -95,7 +92,7 @@ function fromRoman(roman) {
 			v = 5;
 			break;
     default:
-        throw "invalid roman numerals: " + roman;
+        throw new Error("invalid roman numerals: " + roman);
 		}
 
 		n += v;

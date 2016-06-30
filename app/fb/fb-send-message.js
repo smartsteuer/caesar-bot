@@ -1,5 +1,6 @@
 let request = require("request");
 
+const accessToken = process.env.FB_ACCESS_TOKEN;
 
 function errorHandler(error, response/*, body*/) {
 	if (error) {
@@ -13,9 +14,10 @@ function sendTextMessage(sender, text) {
 	let messageData = {
 		text: text
 	};
+
 	request({
 		url: 'https://graph.facebook.com/v2.6/me/messages',
-		qs: {access_token: process.env.FB_ACCESS_TOKEN},
+		qs: {access_token: accessToken},
 		method: 'POST',
 		json: {
 			recipient: {id: sender},
