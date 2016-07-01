@@ -2,6 +2,7 @@
 
 ## Minimal Facebook chat bot which translates roman numbers into arabic ones. Oh - and it's takling german only. 
 
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000?style=flat-square)](LICENSE.txt)
 
 ## Prerequisites
  
