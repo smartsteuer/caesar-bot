@@ -1,9 +1,5 @@
+const gearbox = require('./gearbox');
 
-
-function respondTo(text) {
-
-}
 
 module.exports = {
-	respondTo: respondTo
 };

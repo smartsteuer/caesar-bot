@@ -1,15 +1,21 @@
 let expect = require('chai').expect;
+let proxyquire = require('proxyquire');
 
-let caesar = require('./bot');
+let gearbox = require('./gearbox');
+
 
 describe('Caesar-bot', () => {
 
-	it.skip('should respond to greetings with a caesar like answer', () => {
-		// when
-		let reply = caesar.respondTo("Hallo Caesar!");
+	let caesar;
+	let gear;
+	let incomingText;
 
-		// then
-		expect(reply).to.match(/^(Ave|Salve).*/);
-	})
+	beforeEach(() => {
+		incomingText = '';
+		gear = null;
+	});
+
+	it('should find and use gears to handle incoming messages');
+	it('should the found gear handle the message and return its response');
 
 });
