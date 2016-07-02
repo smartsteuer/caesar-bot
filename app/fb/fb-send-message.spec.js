@@ -3,7 +3,9 @@ let mockRequire = require('proxyquire');
 let MockConsole = require('../test-util/mock-console');
 
 
-describe('Sending facebook messages', () => {
+describe('FB Sending messages', () => {
+
+	process.env.FB_ACCESS_TOKEN = 'super secret token';
 
 	let requestCallArguments;
 
@@ -31,8 +33,6 @@ describe('Sending facebook messages', () => {
 		});
 
 		it('should provide an access token from environment', () => {
-			// given
-			process.env.FB_ACCESS_TOKEN = 'super secret token';
 			// when
 			fbSendMessage.sendTextMessage('sendId', 'text of message to send.');
 

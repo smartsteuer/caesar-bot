@@ -3,7 +3,7 @@ let sinon = require('sinon');
 
 let webhookGet = require('./webhook-get');
 
-describe('Webhook GET', () => {
+describe('FB Webhook GET', () => {
 
 	let req,res,res_send;
 
