@@ -1,6 +1,6 @@
 let expect = require('chai').expect;
 let unroll = require('unroll');
-let thanks = require('./thanks-gear.js');
+let thanks = require('./thanks-gear');
 
 // wrap mochas it function
 unroll.use(it);

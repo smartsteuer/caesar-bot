@@ -47,7 +47,7 @@ describe('FB Webhook POST', () => {
 		//noinspection BadExpressionStatementJS
 		expect(sendMessage).not.to.be.null;
 		expect(sendMessage.sender).to.be.equal(1135310036513916);
-		expect(sendMessage.text).to.be.equal("In Deiner Welt sind es 14");
+		expect(sendMessage.text).to.be.equal("In Eurer Welt sind dies 14");
 	});
 
 	it('should only respond if a text messages is present', () => {

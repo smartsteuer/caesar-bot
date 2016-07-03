@@ -9,7 +9,7 @@ class Gear {
 	execute( text ) {
 		return this.action(text);
 	}
-
+	
 	static randomAnswer( alternatives ) {
 		let index = Math.floor((Math.random() * alternatives.length));
 		return alternatives[index];
