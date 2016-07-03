@@ -24,6 +24,7 @@ describe('Bye gear', () => {
 		['mach\'s gut'],
 		['machs gut'],
 		['machet jut'],
+		['Dann bis dann'],
 		['mach et jut']
 	]);
 

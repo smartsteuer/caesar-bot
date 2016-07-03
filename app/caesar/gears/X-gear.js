@@ -4,12 +4,16 @@ const Gear = require('../gear');
 
 class XGear extends Gear {
 	constructor() {
-		super(/\b(?=[MDCLXVI])(M*(C[MD]|D?C{0,3})(X[CL]|L?X{0,3})(I[XV]|V?I{0,3}))/,
+		super(/\b(?=[MDCLXVI])(M*(C[MD]|D?C{0,3})(X[CL]|L?X{0,3})(I[XV]|V?I{0,3}))(\W|$)/,
 				(text) => {
 					let match = text.match(this.regex);
-					let arabic = XGear.translate(match[1]);
 
-					return 'In Eurer Welt sind dies ' + arabic;
+					if( match ) {
+						let arabic = XGear.translate(match[1]);
+						return 'In Eurer Welt sind dies ' + arabic;
+					} else {
+						return 'Dies vermag ich nicht zu übersetzen';
+					}
 				});
 	}
 

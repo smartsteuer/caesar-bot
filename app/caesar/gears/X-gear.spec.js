@@ -7,13 +7,14 @@ unroll.use(it);
 
 describe('X gear', () => {
 	
-	unroll('should react to #message', (done, fixture) => {
-		expect(x.regex.test(fixture.message)).to.equal(true);
+	unroll('should react to #message with a hit? (#hit)', (done, fixture) => {
+		expect(x.regex.test(fixture.message)).to.equal(fixture.hit);
 		done();
 	}, [
-		['message'],
-		['X'],
-		['Könnten Sie bitte dies römische Zahl: MMMCCXVI übersetzen?']
+		['message', 'hit'],
+		['X', true],
+		['Könnten Sie bitte dies römische Zahl: MMMCCXVI übersetzen?', true],
+		['Dann bis dann', false]
 	]);
 
 	unroll('when executed should translate #input to #output', (done, fixture) => {
