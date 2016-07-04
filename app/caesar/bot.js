@@ -3,8 +3,8 @@ const Gear = require('./gear');
 
 const idling = new Gear(/.*/, function (text) {
 	console.log('Unhandled text: ' + text);
-	return 'Beim Jupiter! Ich weiß nicht, wie ich Euch antworten soll. Würdet Ihr mir eine Zahl ' +
-			'zum Übersetzten nennen, könnte ich Euch helfen.';
+	return 'Beim Jupiter! Ich weiß nicht, wie ich Euch antworten soll. Würdet Ihr mir eine römische Zahl ' +
+			'zum Übersetzen nennen, könnte ich Euch helfen.';
 });
 
 // things this bot does not - but could learn to:
