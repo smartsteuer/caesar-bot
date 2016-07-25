@@ -16,7 +16,7 @@ You should know [git](https://git-scm.com/ "Git Homepage") and
 
 To create your own version of this bot just:
 
-1. Clone or copy
+1. Clone or copy this repository
 ```bash
 git clone https://github.com/smartsteuer/caesar-bot.git name-of-your-bot
 ```
