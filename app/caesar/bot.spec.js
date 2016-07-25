@@ -48,8 +48,8 @@ describe('Caesar-bot', () => {
 		let answer = caesar.handleIncommingText('a message');
 
 		// than
-		expect( answer ).to.equal('Beim Jupiter! Ich weiß nicht, wie ich Euch antworten soll. Würdet Ihr mir eine Zahl ' +
-				'zum Übersetzten nennen, könnte ich Euch helfen.');
+		expect( answer ).to.equal('Beim Jupiter! Ich weiß nicht, wie ich Euch antworten soll. Würdet Ihr mir eine ' +
+				'römische Zahl zum Übersetzen nennen, könnte ich Euch helfen.');
 	});
 
 
