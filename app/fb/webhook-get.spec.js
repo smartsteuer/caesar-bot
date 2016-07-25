@@ -30,6 +30,6 @@ describe('FB Webhook GET', () => {
 
 		webhookGet(req, res);
 		//noinspection BadExpressionStatementJS
-		expect(res_send.calledWith('Error, wrong validation FB_ACCESS_TOKEN')).to.be.true;
+		expect(res_send.calledWith('Error, wrong verify token')).to.be.true;
 	});
 });
