@@ -11,7 +11,7 @@ describe('FB Webhook GET', () => {
 		req = res = {};
 
 		req.query = [];
-		req.query['hub.verify_token'] = 'smarties';
+		req.query['hub.verify_token'] = 'AveCaesar';
 		req.query['hub.challenge'] = 'challenge';
 
 		res_send = res.send = sinon.spy();
@@ -20,7 +20,8 @@ describe('FB Webhook GET', () => {
 	it('should look for the Verify Token and respond with the challenge sent in the verification request', () => {
 
 		webhookGet(req, res);
-		expect(res_send.calledWith('challenge'));
+		//noinspection BadExpressionStatementJS
+		expect(res_send.calledWith('challenge')).to.be.true;
 	});
 
 	it('should look for the Verify Token and respond with error if the FB_ACCESS_TOKEN is wrong', () => {
@@ -28,6 +29,7 @@ describe('FB Webhook GET', () => {
 		req.query['hub.verify_token'] = 'wrong FB_ACCESS_TOKEN';
 
 		webhookGet(req, res);
-		expect(res_send.calledWith('Error, wrong validation FB_ACCESS_TOKEN'));
+		//noinspection BadExpressionStatementJS
+		expect(res_send.calledWith('Error, wrong validation FB_ACCESS_TOKEN')).to.be.true;
 	});
 });
