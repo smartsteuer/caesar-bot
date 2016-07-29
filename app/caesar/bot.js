@@ -8,7 +8,7 @@ const idling = new Gear(/.*/, function (text) {
 });
 
 // things this bot does not - but could learn to:
-// 1. preprocess incomming text
+// 1. preprocess incoming text
 // - split sentences
 // - normalize
 // - auto correct typos
